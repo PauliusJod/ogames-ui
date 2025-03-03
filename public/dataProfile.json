@@ -1,0 +1,68 @@
+{
+  "awaitingEvents": [
+    {
+      "name": "Event 3",
+      "label": "This is an a awaiting event"
+    },
+    {
+      "name": "Event 4",
+      "label": "This is an a awaiting event"
+    },
+    {
+      "name": "Event 5",
+      "label": "This is an a awaiting event"
+    }
+  ],
+  "pastEvents": [
+    {
+      "name": "Event 1",
+      "label": "Past event 1"
+    },
+    {
+      "name": "Event 1",
+      "label": "Past event 1"
+    },
+    {
+      "name": "Event 1",
+      "label": "Past event 1"
+    },
+    {
+      "name": "Event 1",
+      "label": "Past event 1"
+    },
+    {
+      "name": "Event 1",
+      "label": "Past event 1"
+    },
+    {
+      "name": "Event 1",
+      "label": "Past event 1"
+    },
+    {
+      "name": "Event 2",
+      "label": "Past event 2"
+    }
+  ],
+  "members": [
+    {
+      "Name": "Bonnie Green",
+      "points": 15
+    },
+    {
+      "Name": "Bonnie Green",
+      "points": 1
+    },
+    {
+      "Name": "Bonnie Green",
+      "points": 5
+    },
+    {
+      "Name": "Bonnie Green",
+      "points": 7
+    },
+    {
+      "Name": "Bonnie Green",
+      "points": 22
+    }
+  ]
+}
