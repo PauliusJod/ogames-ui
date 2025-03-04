@@ -1,4 +1,20 @@
-export default function ProfileCard() {
+interface Props {
+  user: any;
+}
+
+const calculateRank = (points: number) => {
+  console.log("points: ", points);
+  switch (true) {
+    case points >= 11:
+      return "Rank 1";
+    case points <= 10:
+      return "Rank 2";
+    default:
+      return "undefined";
+  }
+};
+
+export default function ProfileCard({ user }: Props) {
   return (
     <div className='w-full bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700'>
       <div className='flex justify-end px-4 pt-4'>
@@ -50,15 +66,17 @@ export default function ProfileCard() {
       <div className='flex flex-col items-center pb-10'>
         <img
           className='w-24 h-24 mb-3 rounded-full shadow-lg'
-          src='https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg'
+          src={user.userImg}
           alt='Bonnie image'
         />
         <h5 className='mb-1 text-xl font-medium text-gray-900 dark:text-white'>
-          Bonnie Green
+          {user.name}
         </h5>
-        <span className='text-sm text-gray-500 dark:text-gray-400'>Newbie</span>
         <span className='text-sm text-gray-500 dark:text-gray-400'>
-          Player id: #0001
+          {calculateRank(user.rankPoints)}
+        </span>
+        <span className='text-sm text-gray-500 dark:text-gray-400'>
+          Player id: #{user.userId}
         </span>
         {/*<div className='flex mt-4 md:mt-6'>
           Player id: #0001

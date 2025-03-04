@@ -1,4 +1,10 @@
 {
+  "userInfo": {
+    "name": "Bonnie Green",
+    "rankPoints": 10,
+    "userId": "0002",
+    "userImg": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg"
+  },
   "awaitingEvents": [
     {
       "name": "Event 3",
@@ -43,26 +49,46 @@
       "label": "Past event 2"
     }
   ],
-  "members": [
+  "groups": [
     {
-      "Name": "Bonnie Green",
-      "points": 15
+      "group_name": "Group name 1",
+      "group_ranking": "Group rank #001",
+      "members": [
+        {
+          "Name": "Bonnie Green 3",
+          "points": 15
+        },
+        {
+          "Name": "Bonnie Green 4",
+          "points": 1
+        },
+        {
+          "Name": "Bonnie Green 5",
+          "points": 5
+        },
+        {
+          "Name": "Bonnie Green 6",
+          "points": 7
+        },
+        {
+          "Name": "Bonnie Green 7",
+          "points": 22
+        }
+      ]
     },
     {
-      "Name": "Bonnie Green",
-      "points": 1
-    },
-    {
-      "Name": "Bonnie Green",
-      "points": 5
-    },
-    {
-      "Name": "Bonnie Green",
-      "points": 7
-    },
-    {
-      "Name": "Bonnie Green",
-      "points": 22
+      "group_name": "Group name 2",
+      "group_ranking": "Group rank #002",
+      "members": [
+        {
+          "Name": "Bonnie Green 1",
+          "points": 15
+        },
+        {
+          "Name": "Bonnie Green 2",
+          "points": 22
+        }
+      ]
     }
   ]
 }

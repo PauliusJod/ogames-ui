@@ -26,7 +26,9 @@ export default function AwaitingEvents({ awaitingEvents }: Props) {
       <ul className='max-w-md divide-y divide-gray-200 dark:divide-gray-700 max-h-[200px] min-h-[200px] overflow-y-auto'>
         {awaitingEvents &&
           awaitingEvents.map((i, j) => (
-            <li className='pb-1 sm:p-2'>
+            <li
+              className='pb-1 sm:p-2'
+              key={j}>
               <div className='flex items-center space-x-4 rtl:space-x-reverse'>
                 <div className='shrink-0'>{showEventImage("")}</div>
                 <div className='flex-1 min-w-0'>
@@ -42,7 +44,7 @@ export default function AwaitingEvents({ awaitingEvents }: Props) {
                 <div
                   className='inline-flex items-center text-base font-semibold text-gray-900 dark:text-white'
                   title='group ranking'>
-                  #{Math.round(Math.random() * 10)}
+                  #x
                 </div>
               </div>
             </li>

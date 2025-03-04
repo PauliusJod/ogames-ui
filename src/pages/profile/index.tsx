@@ -1,19 +1,21 @@
-import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import ProfileCard from "./components/ProfileCard";
 import AwaitingEvents from "./components/AwaitingEvents";
 import PastEvents from "./components/PastEvents";
 import ProfileGroup from "./components/ProfileGroup";
+import { userInfo } from "os";
 interface ProfilePageProps {
+  userInfo: any;
   awaitingEvents: any[];
   pastEvents: any[];
-  members: any[];
+  groups: any[];
 }
 
 export default function Home({
+  userInfo,
   awaitingEvents,
   pastEvents,
-  members,
+  groups,
 }: ProfilePageProps) {
   return (
     <div className='flex flex-col h-screen overflow-hidden bg-gradient-to-r from-slate-400 to-slate-500'>
@@ -25,10 +27,10 @@ export default function Home({
           [Profile main container]
           <div className='grid grid-cols-6 gap-4'>
             <div className='col-span-4 col-start-2'>
-              <ProfileCard></ProfileCard>
+              <ProfileCard user={userInfo}></ProfileCard>
             </div>
-            <div className='col-span-4 col-start-2 bg-red-200'>
-              <ProfileGroup members={members}></ProfileGroup>
+            <div className='col-span-4 col-start-2'>
+              <ProfileGroup groups={groups}></ProfileGroup>
             </div>
             {/* <div className='col-span-2 col-end-6 bg-red-200'>05</div> */}
             <div className='col-start-2 col-end-4'>
@@ -49,6 +51,6 @@ export default function Home({
 export async function getStaticProps() {
   const req = await fetch("http://localhost:3000/dataProfile.json");
   const data = await req.json();
-  const { awaitingEvents, pastEvents, members } = data;
-  return { props: { awaitingEvents, pastEvents, members } };
+  const { userInfo, awaitingEvents, pastEvents, groups } = data;
+  return { props: { userInfo, awaitingEvents, pastEvents, groups } };
 }
