@@ -2,7 +2,6 @@ import { MdEventNote } from "react-icons/md";
 import { PiCrownSimpleBold } from "react-icons/pi";
 import { FaRegSquarePlus, FaRegSquareMinus } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa";
-import { useEffect, useState } from "react";
 import Spinner from "@/components/Spinner";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -69,15 +68,12 @@ export default function ProfileGroup({ group }: Props) {
       <div
         className='col-span-6 text-slate-700 pt-2 mx-4 flex-inline'
         key={group_name}>
-        {/* [Profile Group] */}
         <p className='font-semibold'>{group_name}</p>
         <p className='text-sm'>{group_ranking}</p>
       </div>
       <div className='col-start-1 col-end-4 p-2'>
-        {/* border-r-4 border-slate-200 */}
         <p className='text-md font-semibold text-center'>Members</p>
         <ul className='max-w-md divide-y divide-gray-200 dark:divide-gray-700 max-h-[200px] min-h-[200px] overflow-y-auto'>
-          {/* groups[0].members */}
           {members &&
             members.map((i, j) => (
               <li
@@ -146,7 +142,6 @@ export default function ProfileGroup({ group }: Props) {
               className={`absolute right-2 ${
                 errors.invited_player_id ? "top-1/3" : "top-1/2"
               } -translate-y-1/2 bg-slate-800 text-white px-3 py-1 text-sm rounded-md hover:bg-slate-700 hover:cursor-pointer`}>
-              {/* onClick={() => sendInvite(group_id)} */}
               <FaPlus
                 size={16}
                 className={`text-slate-200 ${

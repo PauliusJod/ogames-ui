@@ -31,7 +31,6 @@ export default function Home({
             <div className='col-span-4 col-start-2'>
               <ProfileGroupsSection groups={groups}></ProfileGroupsSection>
             </div>
-            {/* <div className='col-span-2 col-end-6 bg-red-200'>05</div> */}
             <div className='col-start-2 col-end-4'>
               <AwaitingEvents awaitingEvents={awaitingEvents}></AwaitingEvents>
             </div>

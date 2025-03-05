@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ProfileGroup from "./ProfileGroup";
 
 interface Props {
@@ -15,15 +15,12 @@ export default function ProfileGroupsSection({ groups }: Props) {
     if (index === groups.length - 1) return "rounded-tr-lg";
     return "";
   };
-  // useEffect(() => {
-  //   console.log("groups[curGroup]: ", groups[curGroup]);
-  // }, []);
+
   return (
     <div>
       <div className='w-full flex border-b border-gray-200 dark:border-gray-700 text-sm font-medium text-center text-gray-500 dark:text-gray-400'>
         {groups &&
           groups.map((tab, index) => (
-            // rounded-tl-lg
             <div
               key={index}
               className={`flex-1 px-4 text-slate-950 cursor-pointer py-2 ${bordersStyle(

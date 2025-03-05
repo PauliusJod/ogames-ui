@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { MdEventNote } from "react-icons/md";
 
 interface Props {
