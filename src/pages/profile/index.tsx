@@ -2,8 +2,7 @@ import Navbar from "@/components/Navbar";
 import ProfileCard from "./components/ProfileCard";
 import AwaitingEvents from "./components/AwaitingEvents";
 import PastEvents from "./components/PastEvents";
-import ProfileGroup from "./components/ProfileGroup";
-import { userInfo } from "os";
+import ProfileGroupsSection from "./components/ProfileGroupsSection";
 interface ProfilePageProps {
   userInfo: any;
   awaitingEvents: any[];
@@ -30,7 +29,7 @@ export default function Home({
               <ProfileCard user={userInfo}></ProfileCard>
             </div>
             <div className='col-span-4 col-start-2'>
-              <ProfileGroup groups={groups}></ProfileGroup>
+              <ProfileGroupsSection groups={groups}></ProfileGroupsSection>
             </div>
             {/* <div className='col-span-2 col-end-6 bg-red-200'>05</div> */}
             <div className='col-start-2 col-end-4'>
@@ -39,7 +38,13 @@ export default function Home({
             <div className='col-span-2 col-end-6'>
               <PastEvents pastEvents={pastEvents}></PastEvents>
             </div>
-            <div className='col-start-1 col-end-7 bg-red-200'>06</div>
+            <div className='col-start-2 col-end-6'>
+              <div className='w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700'>
+                <p className='text-sm text-center text-slate-700 pb-3'>
+                  [Additional content place for later..]
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </main>

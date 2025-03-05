@@ -51,6 +51,7 @@
   ],
   "groups": [
     {
+      "group_id": 0,
       "group_name": "Group name 1",
       "group_ranking": "Group rank #001",
       "members": [
@@ -77,6 +78,7 @@
       ]
     },
     {
+      "group_id": 1,
       "group_name": "Group name 2",
       "group_ranking": "Group rank #002",
       "members": [
